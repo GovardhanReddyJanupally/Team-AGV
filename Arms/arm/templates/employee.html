@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+</head>
+<body>
+    <h2>Table Example</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Emp_ frst ID</th>
+                <th>Fast_Name</th>
+                <th>last_name</th>
+                <th>email</th>
+                <th>date_of_join</th>
+                <th>technology_cat</th>
+                <th>designation</th>
+                <th>employee_status</th>
+                <th>graduation</th>
+                <th>stream</th>
+                <th>ug_year_of_passout</th>
+                <th>pg_education</th>
+                <th>pg_education_passout_year</th>
+                <th>pg_stram</th>
+                <th>mobile_no</th>
+                <th>alt_mobile_no</th>
+                <th>remarks</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.employee_id }}</td>
+                    <td>{{ item.first_name }}</td>
+                    <td>{{ item.last_name }}</td>
+                    <td>{{ item.email}}</td>
+                    <td>{{ item.date_of_join }}</td>
+                    <td>{{ item.tecignation }}</td>
+                    <td>{{ item.employee_status }}</td>
+                    <td>{{ item.graduation }}</td>
+                    <td>{{ item.stream }}</td>
+                    <td>{{ item.ug_year_of_passout }}</td>
+
+                    <td>{{ item.pg_education }}</td>
+                    <td>{{ item.pg_education_passout_year}}</td>
+                    <td>{{ item.pg_stram }}</td>
+                    <td>{{ item.mobile_no }}</td>
+                    <td>{{ item.alt_mobile_no }}</td>
+                    <td>{{ item.remarks }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <!-- Display individual field errors -->
+    {% for field in form %}
+
+        {{ field.label_tag }}
+        {{ field }} <br><br>
+        {% for error in field.errors %}
+           <h1> <span class="error">{{ error }}</span> </h1>
+        {% endfor %}
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+</center>
+</body>
+</html>
